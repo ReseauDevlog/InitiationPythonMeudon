@@ -1,0 +1,181 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>Quizz Python Partie 1</title>
+		<style type="text/css">   
+			<!--  
+body { 
+	margin-left : 10; margin-right : 20; margin-top : 0;  background-color:#ffffff; 
+	font-family : Arial, Helvetica, sans-serif;
+	text-align: left;
+} 
+
+.titlebanner {
+	margin-left:30px; margin-right : 40;
+	font-size: 24px; color: #606060;
+	font-weight: bold;
+	
+}
+
+.titlebanner h1 {
+	margin-left:30px; vertical-align: bottom;
+}
+
+.thematique {
+	margin-left:30px; margin-right : 200px; background-color:#ffffff;
+	padding:5px;
+	margin-top : 10px;
+	width:100%;
+	font-size : 24px; 
+	font-weight: bold;
+	color: #346DA2;
+	text-align: left;
+}
+
+.question {
+	margin-left:30px; margin-top:10px;
+	width:100%;
+	background-color:#FFD642;
+	color:black;
+	font-weight:bold;
+	padding:5px;
+	margin-bottom:2px;
+	text-align:left;
+	clear:both;
+	font-size:15px;
+}
+
+.reponses {
+	margin-left:30px;
+	margin-top:2px;
+	text-align:left;
+	line-height:25px;
+	font-size:14px
+}
+
+.reponses a:link, .reponses a:visited {color : #263033; text-decoration : underline; cursor:pointer;} 
+.reponses a:hover {color : #5494a4; text-decoration : underline; cursor:pointer;} 
+
+LABEL.reponse {
+	font-weight: bold;
+	cursor:pointer;display:inline;
+}
+
+LABEL.none {
+	font-weight: normal;
+	cursor:pointer;display:inline;
+}
+			-->  
+		</style>  
+		<script type="text/javascript">
+			<!-- Fonction verifier_question + afficher explication -->
+			<!--
+			function afficher_cb_soluce(id) {
+				document.getElementById('boutton_'+id).style.display="none";
+				document.getElementById(id+'soluce').style.display="block";
+				var answers = document.getElementsByName(id+'true');
+				for (var i=0; i < answers.length; i++) {
+					answers[i].style.backgroundColor = "#4CFF00";
+					answers[i].style.fontWeight = "bold";
+				}
+				return true;
+			}
+			-->
+		</script>
+	</head>
+	<body>
+		<!-- En-tete -->
+		<!-- <h1 class="titlebanner" >Qu'avez-vous retenu sur ...</h1> -->
+		<div class="thematique">Qu'avez-vous retenu sur ...</div>
+		
+		<!-- En-tete -->
+		<div class="thematique">Les noms de variables</div>
+		
+		<!-- Question 1 -->
+		<div class="question">Parmi les noms de variables suivants, lesquels sont autorisés par le langage ? <i>(plusieurs réponses possibles)</i></div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse1">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse1" id="label_Q1reponse1" name="Q1true" >nom_de_variable</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse2" id="label_Q1reponse2">nom-de-variable</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse3">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse3" id="label_Q1reponse3" name="Q1true" >nom_de_variable2</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse4">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse4" id="label_Q1reponse4">nom:de:variable</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse5">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse5" id="label_Q1reponse5" name="Q1true" >NomDeVariable</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse6">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse6" id="label_Q1reponse6">2eme_variable</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse7">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse7" id="label_Q1reponse7" name="Q1true" >_nom_de_variable</label>
+		</div>
+		<div class="reponses" id="boutton_Q1">
+			<a onclick="javascript:afficher_cb_soluce('Q1');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q1soluce"  style="display: none;">
+			<b>le caractère deux-points ':' n'est pas autorisé<br>le caractère '-' n'est pas autorisé<br>un identifiant ne peut pas commencer par un chiffre</b>
+		</div>
+		<br>
+		
+		<!-- Question 2 -->
+		<div class="question">Peut-on utiliser des caractères accentués dans les noms de variables ? <i>(une seule réponse possible)</i></div>
+		<div class="reponses">
+			<input type="radio" id="Q2reponse1" name="Q2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse1" id="label_Q2reponse1" name="Q2true" >oui</label>
+		</div>
+		<div class="reponses">
+			<input type="radio" id="Q2reponse2" name="Q2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse2" id="label_Q2reponse2" >non</label>
+		</div>
+		<div class="reponses" id="boutton_Q2">
+			<a onclick="javascript:afficher_cb_soluce('Q2');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q2soluce"  style="display: none;">
+			<b>EN PythonOn ne peut utiliser des accents que dans les commentaires, et à l'intérieur des chaînes de caractères.<br>En Python 3, les accents sont acceptés dans les noms de variables. Cependant cette possibilité est vivement déconseillée</b>
+		</div>
+		<br>
+		
+		<!-- Question 3 -->
+		<div class="question">Parmi les noms de variables suivants, lesquels sont autorisés par le langage ? <i>(plusieurs réponses possibles)</i></div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse1">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse1" id="label_Q3reponse1" name="Q3true" >_</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse2" id="label_Q3reponse2" name="Q3true" >_A</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse3">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse3" id="label_Q3reponse3" name="Q3true" >_a_</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse4">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse4" id="label_Q3reponse4" name="Q3true" >A_</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse5">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse5" id="label_Q3reponse5" name="Q3true" >__</label>
+		</div>
+		<div class="reponses" id="boutton_Q3">
+			<a onclick="javascript:afficher_cb_soluce('Q3');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q3soluce"  style="display: none;">
+			<b>Toutes ces formes sont légales, y compris la première malgré l'absence de caractère alphanumérique<br>On notera toutefois qu'elles sont toutes non recommandées.</b>
+		</div>
+		<br>
+		
+	</body>
+</html>

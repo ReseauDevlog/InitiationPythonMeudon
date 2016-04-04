@@ -1,0 +1,197 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>Quizz Python Partie 6</title>
+		<style type="text/css">   
+			<!--  
+body { 
+	margin-left : 10; margin-right : 20; margin-top : 0;  background-color:#ffffff; 
+	font-family : Arial, Helvetica, sans-serif;
+	text-align: left;
+} 
+
+.titlebanner {
+	margin-left:30px; margin-right : 40;
+	font-size: 24px; color: #606060;
+	font-weight: bold;
+	
+}
+
+.titlebanner h1 {
+	margin-left:30px; vertical-align: bottom;
+}
+
+.thematique {
+	margin-left:30px; margin-right : 200px; background-color:#ffffff;
+	padding:5px;
+	margin-top : 10px;
+	width:100%;
+	font-size : 24px; 
+	font-weight: bold;
+	color: #346DA2;
+	text-align: left;
+}
+
+.question {
+	margin-left:30px; margin-top:10px;
+	width:100%;
+	background-color:#FFD642;
+	color:black;
+	font-weight:bold;
+	padding:5px;
+	margin-bottom:2px;
+	text-align:left;
+	clear:both;
+	font-size:15px;
+}
+
+.reponses {
+	margin-left:30px;
+	margin-top:2px;
+	text-align:left;
+	line-height:25px;
+	font-size:14px
+}
+
+.reponses a:link, .reponses a:visited {color : #263033; text-decoration : underline; cursor:pointer;} 
+.reponses a:hover {color : #5494a4; text-decoration : underline; cursor:pointer;} 
+
+LABEL.reponse {
+	font-weight: bold;
+	cursor:pointer;display:inline;
+}
+
+LABEL.none {
+	font-weight: normal;
+	cursor:pointer;display:inline;
+}
+			-->  
+		</style>  
+		<script type="text/javascript">
+			<!-- Fonction verifier_question + afficher explication -->
+			<!--
+			function afficher_cb_soluce(id) {
+				document.getElementById('boutton_'+id).style.display="none";
+				document.getElementById(id+'soluce').style.display="block";
+				var answers = document.getElementsByName(id+'true');
+				for (var i=0; i < answers.length; i++) {
+					answers[i].style.backgroundColor = "#4CFF00";
+					answers[i].style.fontWeight = "bold";
+				}
+				return true;
+			}
+			-->
+		</script>
+	</head>
+	<body>
+		<!-- En-tete -->
+		<!-- <h1 class="titlebanner" >Qu'avez-vous retenu sur ...</h1> -->
+		<div class="thematique">Qu'avez-vous retenu sur ...</div>
+		
+		<!-- En-tete -->
+		<div class="thematique">if et indentation</div>
+		<div class="reponses">
+		
+		<!-- Question 1 -->
+		<div class="question">Que peut-on dire du code suivant ? <i>(plusieurs réponses possibles)</i></div>
+		<div class="reponses">
+		<b><pre>if range(1):
+  print 'oui'
+else:
+        print 'non'	</pre></b>
+</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse1">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse1" id="label_Q1reponse1" >Ce code est invalide</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse2" id="label_Q1reponse2" name="Q1true" >Ce code affiche 'oui'&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse3">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse3" id="label_Q1reponse3" >Ce code affiche 'non'</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse4">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse4" id="label_Q1reponse4" >Ce code suit les recommandations de présentation du code en python</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse5">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse5" id="label_Q1reponse5" name="Q1true" >Ce code ne suit pas les recommandations de présentation du code en python&nbsp;</label>
+		</div>
+		<div class="reponses" id="boutton_Q1">
+			<a onclick="javascript:afficher_cb_soluce('Q1');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q1soluce"  style="display: none;">
+			<b>Comme range(1) retourne la liste [1], le test est positif et donc on affiche oui.
+<br>
+Par ailleurs ce code est valide - les deux blocs n'ont pas la même indentation mais ce n'est pas rédhibitoire; en revanche il ne suit pas les recommandations de présentation du code en python, qui sont de toujours indenter un bloc d'instructions de 4 espaces.
+</b>
+		</div>
+		<br>
+
+		<!-- Question 2 -->
+		<div class="question">Parmi les fragments suivants, quels sont ceux qui impriment oui ? <i>(plusieurs réponses possibles)</i></div>
+		<div class="reponses">
+		fragment 1
+		<b><pre>print 'oui' if x == y else 'non'</pre></b>
+		Fragment 2
+		<b><pre>print 'oui' if x == z else 'non'</pre></b>
+		Fragment 3
+		<b><pre>print 'oui' if None is False or None == False else 'non'</pre></b>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse1">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse1" id="label_Q2reponse1" >Fragment 1</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse2" id="label_Q2reponse2" name="Q2true" >Fragment 2&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse3">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse3" id="label_Q2reponse3" >Fragment 3</label>
+		</div>
+		<div class="reponses" id="boutton_Q2">
+			<a onclick="javascript:afficher_cb_soluce('Q2');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q2soluce"  style="display: none;">
+			<b>Le premier cas imprime non car on compare une liste et un tuple.
+<br>
+Le second cas en revanche imprime oui, on compare deux listes qui ont le même contenu.
+<br>
+Dans la dernière forme, les deux constantes None et False ne sont égaux ni par l'opérateur is (ce ne sont pas les mêmes objets) ni par l'opérateur == (ils sont de types différents).
+</b>
+		</div>
+		<br>
+
+		<!-- Question 3 -->
+		<div class="question">Parmi les fragments suivants, quels sont ceux qui impriment oui ? <i>(plusieurs réponses possibles)</i></div>
+		<div class="reponses">
+		fragment 1
+		<b><pre>print 'oui' if False and (False or True) else 'non'</pre></b>
+		Fragment 2
+		<b><pre>print 'oui' if False and False or True else 'non'</pre></b>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse1">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse1" id="label_Q3reponse1" >Fragment 1</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse2" id="label_Q3reponse2" name="Q3true" >Fragment 2&nbsp;</label>
+		</div>
+		<div class="reponses" id="boutton_Q3">
+			<a onclick="javascript:afficher_cb_soluce('Q3');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q3soluce"  style="display: none;">
+			<b>Le premier cas imprime clairement non, puisque le premier terme du or est False.
+<br>
+Dans le second cas, en l'absence de parenthèses la condition est interprétée comme (False and False) or True.
+</b>
+		</div>
+		<br>
+		
+	</body>
+</html>

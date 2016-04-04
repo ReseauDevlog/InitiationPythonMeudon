@@ -1,0 +1,10 @@
+name: synope
+
+dependencies:
+  - python=3.5
+  - numpy
+  - matplotlib
+  - scipy
+  - pandas
+  - ipython
+  - ipython-notebook

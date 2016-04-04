@@ -1,0 +1,225 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>Quizz Python Partie 5</title>
+		<style type="text/css">   
+			<!--  
+				body { 
+				margin-left : 10; margin-right : 20; margin-top : 0;  background-color:#ffffff; 
+				font-family : Arial, Helvetica, sans-serif;
+				text-align: left;
+				} 
+				
+				.titlebanner {
+				margin-left:30px; margin-right : 40;
+				font-size: 24px; color: #606060;
+				font-weight: bold;
+				
+				}
+				
+				.titlebanner h1 {
+				margin-left:30px; vertical-align: bottom;
+				}
+				
+				.thematique {
+				margin-left:30px; margin-right : 200px; background-color:#ffffff;
+				padding:5px;
+				margin-top : 10px;
+				width:100%;
+				font-size : 24px; 
+				font-weight: bold;
+				color: #346DA2;
+				text-align: left;
+				}
+				
+				.question {
+				margin-left:30px; margin-top:10px;
+				width:100%;
+				background-color:#FFD642;
+				color:black;
+				font-weight:bold;
+				padding:5px;
+				margin-bottom:2px;
+				text-align:left;
+				clear:both;
+				font-size:15px;
+				}
+				
+				.reponses {
+				margin-left:30px;
+				margin-top:2px;
+				text-align:left;
+				line-height:25px;
+				font-size:14px
+				}
+				
+				.reponses a:link, .reponses a:visited {color : #263033; text-decoration : underline; cursor:pointer;} 
+				.reponses a:hover {color : #5494a4; text-decoration : underline; cursor:pointer;} 
+				
+				LABEL.reponse {
+				font-weight: bold;
+				cursor:pointer;display:inline;
+				}
+				
+				LABEL.none {
+				font-weight: normal;
+				cursor:pointer;display:inline;
+				}
+			-->  
+		</style>  
+		<script type="text/javascript">
+			<!-- Fonction verifier_question + afficher explication -->
+			<!--
+			function afficher_cb_soluce(id) {
+				document.getElementById('boutton_'+id).style.display="none";
+				document.getElementById(id+'soluce').style.display="block";
+				var answers = document.getElementsByName(id+'true');
+				for (var i=0; i < answers.length; i++) {
+					answers[i].style.backgroundColor = "#4CFF00";
+					answers[i].style.fontWeight = "bold";
+				}
+				return true;
+			}
+			-->
+		</script>
+	</head>
+	<body>
+		<!-- En-tete -->
+		<!-- <h1 class="titlebanner" >Qu'avez-vous retenu sur ...</h1> -->
+		<div class="thematique">Qu'avez-vous retenu sur ...</div>
+		
+		<!-- En-tete -->
+		<div class="thematique">Les tuples</div>
+		
+		<!-- Question Q1 -->
+		<div class="question">Parmi les expressions et instructions ci-dessous, lesquelles sont valides ? <i>(plusieurs réponses possibles)</i></div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse1">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse1" id="label_Q1reponse1" name="Q1true" >triple[0]&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse2" id="label_Q1reponse2" name="Q1true" >triple[:]&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse3">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse3" id="label_Q1reponse3" >triple[len(triple)]</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse4">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse4" id="label_Q1reponse4" >triple[0] = 0</label>
+		</div>
+		<div class="reponses" id="boutton_Q1">
+			<a onclick="javascript:afficher_cb_soluce('Q1');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q1soluce"  style="display: none;">
+			<b>La première expression est correcte et renvoie 1
+				<br>
+				La seconde expression est correcte et renvoie une copie du tuple
+				<br>
+				La troisième expression n'est pas valable et renvoie une exception IndexError, car triple n'a pas de case numéro 3 (index out of range)
+				<br>
+			L'affection en quatrième position n'est pas autorisée, un tuple est un objet immuable</b>
+		</div>
+		<br>
+		
+		<!-- Question 2 -->
+		<div class="question">Quelles sont les expressions qui renvoient True ? <i>(plusieurs réponses possibles)</i></div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse1">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse1" id="label_Q2reponse1" name="Q2true" >[ ( [ (1) ] ) ] == [ [ 1 ] ]&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse2" id="label_Q2reponse2" >(1,) == (1)</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse3">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse3" id="label_Q2reponse3" name="Q2true" >[ (1,) ] [0][0] == 1&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse4">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse4" id="label_Q2reponse4" >[ (1), ] [0][0] == 1</label>
+		</div>
+		<div class="reponses" id="boutton_Q2">
+			<a onclick="javascript:afficher_cb_soluce('Q2');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q2soluce"  style="display: none;">
+			<b>Dans la première expression, l'absence de virgule rend les parenthèses vides de sens
+				<br>
+				Dans la seconde expression la partie droite n'est pas un tuple, mais un simple entier à cause de l'absence de virgule
+				<br>
+				Dans la troisième expression, on a une liste contenant un tuple contenant l'entier, l'expression renvoie True
+				<br>
+				Dans la quatrième expression, la virgule n'est pas correctement placée et la parenthèse ne crée pas un tuple.
+			</b>
+		</div>
+		<br>
+		
+		<!-- Question 3 -->
+		<div class="question">Quelles sont parmi les affectations suivantes celles qui sont valables, et qui affectent 4 à <i>four</i> ? <i>(plusieurs réponses possibles)</i></div>
+		<div class="reponses" >
+			On se donne la variable suivante :
+			<b><pre>quadruple = (1, [2, 3], True, [ (4,) ] )</pre></b>
+		</div>
+		
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse1">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse1" id="label_Q3reponse1" >( one, (two, three), ignored, ( ( four ) ) ) = quadruple</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse2" id="label_Q3reponse2" name="Q3true" >( one, (two, three,), _, ( ( four, ), ) ) = quadruple&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse3">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse3" id="label_Q3reponse3" >( (one,), (two, three), _, [ [ four ] ] ) = quadruple</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse4">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse4" id="label_Q3reponse4" name="Q3true" >( one, (two, three), _, [ [ four ] ] ) = quadruple&nbsp;</label>
+		</div>
+		<div class="reponses" id="boutton_Q3">
+			<a onclick="javascript:afficher_cb_soluce('Q3');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q3soluce"  style="display: none;">
+			<b>Dans la première forme, four ne se trouve pas dans un tuple à cause de l'absence de virgule
+				<br>
+				La seconde forme est correcte
+				<br>
+				Dans la troisième forme, one est inclus dans un tuple, ce qui empêche l'affectation de fonctionner
+				<br>
+			La dernière forme est correcte, même si les parties droite et gauche de l'affectation mélangent listes et tuples.</b>
+		</div>
+		<br>
+		
+		<!-- Question 4 -->
+		<div class="question">On cherche à écrire un code qui permette d'intervertir les deux derniers éléments dans une liste. On suppose que la liste en entrée a au moins deux éléments. <br>Quelles sont parmi les variantes suivantes celles qui font bien ce qu'on veut ? <i>(plusieurs réponses possibles)</i></div>
+		<div class="reponses">
+			<input type="checkbox" id="Q4reponse1">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q4reponse1" id="label_Q4reponse1" name="Q4true" >tmp = liste[-1]; liste[-1] = liste [-2]; liste[-2] = tmp&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q4reponse2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q4reponse2" id="label_Q4reponse2" >liste.reverse(-2, -1)</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q4reponse3">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q4reponse3" id="label_Q4reponse3" name="Q4true" >liste[-2], liste[-1] = liste[-1], liste[-2]&nbsp;</label>
+		</div>
+		<div class="reponses" id="boutton_Q4">
+			<a onclick="javascript:afficher_cb_soluce('Q4');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q4soluce"  style="display: none;">
+			<b>La première formule fonctionne, quoi que pas très "pythonique"
+				<br>
+				La seconde formule est une invention, list.reverse() n'accepte pas d'argument, comme le montrerait help(reverse)
+				<br>
+				La dernière formule fonctionne. Les expressions à droite de l'affectation sont toutes évaluées, puis l'affectation est réalisée.
+			</b>
+		</div>
+		<br>
+		
+		
+	</body>
+</html>

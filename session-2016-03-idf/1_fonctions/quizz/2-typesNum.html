@@ -1,0 +1,174 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>Quizz Python Partie 2</title>
+		<style type="text/css">   
+			<!--  
+body { 
+	margin-left : 10; margin-right : 20; margin-top : 0;  background-color:#ffffff; 
+	font-family : Arial, Helvetica, sans-serif;
+	text-align: left;
+} 
+
+.titlebanner {
+	margin-left:30px; margin-right : 40;
+	font-size: 24px; color: #606060;
+	font-weight: bold;
+	
+}
+
+.titlebanner h1 {
+	margin-left:30px; vertical-align: bottom;
+}
+
+.thematique {
+	margin-left:30px; margin-right : 200px; background-color:#ffffff;
+	padding:5px;
+	margin-top : 10px;
+	width:100%;
+	font-size : 24px; 
+	font-weight: bold;
+	color: #346DA2;
+	text-align: left;
+}
+
+.question {
+	margin-left:30px; margin-top:10px;
+	width:100%;
+	background-color:#FFD642;
+	color:black;
+	font-weight:bold;
+	padding:5px;
+	margin-bottom:2px;
+	text-align:left;
+	clear:both;
+	font-size:15px;
+}
+
+.reponses {
+	margin-left:30px;
+	margin-top:2px;
+	text-align:left;
+	line-height:25px;
+	font-size:14px
+}
+
+.reponses a:link, .reponses a:visited {color : #263033; text-decoration : underline; cursor:pointer;} 
+.reponses a:hover {color : #5494a4; text-decoration : underline; cursor:pointer;} 
+
+LABEL.reponse {
+	font-weight: bold;
+	cursor:pointer;display:inline;
+}
+
+LABEL.none {
+	font-weight: normal;
+	cursor:pointer;display:inline;
+}
+			-->  
+		</style>  
+		<script type="text/javascript">
+			<!-- Fonction verifier_question + afficher explication -->
+			<!--
+			function afficher_cb_soluce(id) {
+				document.getElementById('boutton_'+id).style.display="none";
+				document.getElementById(id+'soluce').style.display="block";
+				var answers = document.getElementsByName(id+'true');
+				for (var i=0; i < answers.length; i++) {
+					answers[i].style.backgroundColor = "#4CFF00";
+					answers[i].style.fontWeight = "bold";
+				}
+				return true;
+			}
+			-->
+		</script>
+	</head>
+	<body>
+		<!-- En-tete -->
+		<!-- <h1 class="titlebanner" >Qu'avez-vous retenu sur ...</h1> -->
+		<div class="thematique">Qu'avez-vous retenu sur ...</div>
+		
+		<!-- En-tete -->
+		<div class="thematique">Les types numériques</div>
+		
+		<!-- Question 1 -->
+		<div class="question">Comment calculer la 16-ème puissance de 2 ? <i>(une seule réponse possible)</i></div>
+		<div class="reponses">
+			<input type="radio" id="Q1reponse1" name="Q2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse1" id="label_Q1reponse1" >2 & 16</label>
+		</div>
+		<div class="reponses">
+			<input type="radio" id="Q1reponse2
+			<" name="Q2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse2" id="label_Q1reponse2" name="Q1true" >2 ** 16&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="radio" id="Q1reponse3
+			<" name="Q2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse3" id="label_Q1reponse3" >2 && 16</label>
+		</div>
+		<div class="reponses">
+			<input type="radio" id="Q1reponse4
+			<" name="Q2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse4" id="label_Q1reponse4" >2 | 16</label>
+		</div>
+		<div class="reponses" id="boutton_Q1">
+			<a onclick="javascript:afficher_cb_soluce('Q1');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q1soluce"  style="display: none;">
+			<b>Le signe puissance en python est **</b>
+		</div>
+		<br>
+
+		<!-- Question 2 -->
+		<div class="question">Comment entrer la valeur du complexe 3 + 2i ? <i>(plusieurs réponses possibles)</i></div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse1">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse1" id="label_Q2reponse1" >3 + 2i</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse2" id="label_Q2reponse2" name="Q2true" >3 + 2j&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse3">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse3" id="label_Q2reponse3" name="Q2true" >3 + 2 * 1j&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse4">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse4" id="label_Q2reponse4" >3 + 2 * i</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse5">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse5" id="label_Q2reponse5" >3 + 2 * j</label>
+		</div>
+		<div class="reponses" id="boutton_Q2">
+			<a onclick="javascript:afficher_cb_soluce('Q2');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q2soluce"  style="display: none;">
+			<b>Les anglais utilisent 'j' plutôt que notre 'i'<br>Les deux dernières formes font référence à une variable "normale" qui s'appellerait 'i' ou 'j'</b>
+		</div>
+		<br>
+
+		<!-- Question 3 -->
+		<div class="question">Quelles sont les expressions qui retournent la valeur True ? <i>(une seule réponse possible)</i></div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse1" >&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse1" id="label_Q3reponse1" name="Q3true" >type(2 ** 16) == type(2 ** 8)&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse2" >&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse2" id="label_Q3reponse2" >type(2 ** 200) == type(2 ** 8)</label>
+		</div>
+		<div class="reponses" id="boutton_Q3">
+			<a onclick="javascript:afficher_cb_soluce('Q3');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q3soluce"  style="display: none;">
+			<b>Les petites (8 et 16) puissances de 2 sont toutes deux assez petites pour être représentées par des entiers simples.<br>
+				Par contre 2**200 est beaucoup trop gros pour être représenté par un entier simple, c'est un entier long.</b>
+		</div>
+		<br>
+
+		
+	</body>
+</html>

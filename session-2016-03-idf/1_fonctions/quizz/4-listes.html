@@ -1,0 +1,214 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>Quizz Python Partie 4</title>
+		<style type="text/css">   
+			<!--  
+				body { 
+				margin-left : 10; margin-right : 20; margin-top : 0;  background-color:#ffffff; 
+				font-family : Arial, Helvetica, sans-serif;
+				text-align: left;
+				} 
+				
+				.titlebanner {
+				margin-left:30px; margin-right : 40;
+				font-size: 24px; color: #606060;
+				font-weight: bold;
+				
+				}
+				
+				.titlebanner h1 {
+				margin-left:30px; vertical-align: bottom;
+				}
+				
+				.thematique {
+				margin-left:30px; margin-right : 200px; background-color:#ffffff;
+				padding:5px;
+				margin-top : 10px;
+				width:100%;
+				font-size : 24px; 
+				font-weight: bold;
+				color: #346DA2;
+				text-align: left;
+				}
+				
+				.question {
+				margin-left:30px; margin-top:10px;
+				width:100%;
+				background-color:#FFD642;
+				color:black;
+				font-weight:bold;
+				padding:5px;
+				margin-bottom:2px;
+				text-align:left;
+				clear:both;
+				font-size:15px;
+				}
+				
+				.reponses {
+				margin-left:30px;
+				margin-top:2px;
+				text-align:left;
+				line-height:25px;
+				font-size:14px
+				}
+				
+				.reponses a:link, .reponses a:visited {color : #263033; text-decoration : underline; cursor:pointer;} 
+				.reponses a:hover {color : #5494a4; text-decoration : underline; cursor:pointer;} 
+				
+				LABEL.reponse {
+				font-weight: bold;
+				cursor:pointer;display:inline;
+				}
+				
+				LABEL.none {
+				font-weight: normal;
+				cursor:pointer;display:inline;
+				}
+			-->  
+		</style>  
+		<script type="text/javascript">
+			<!-- Fonction verifier_question + afficher explication -->
+			<!--
+			function afficher_cb_soluce(id) {
+				document.getElementById('boutton_'+id).style.display="none";
+				document.getElementById(id+'soluce').style.display="block";
+				var answers = document.getElementsByName(id+'true');
+				for (var i=0; i < answers.length; i++) {
+					answers[i].style.backgroundColor = "#4CFF00";
+					answers[i].style.fontWeight = "bold";
+				}
+				return true;
+			}
+			-->
+		</script>
+	</head>
+	<body>
+		<!-- En-tete -->
+		<!-- <h1 class="titlebanner" >Qu'avez-vous retenu sur ...</h1> -->
+		<div class="thematique">Qu'avez-vous retenu sur ...</div>
+		
+		<!-- En-tete -->
+		<div class="thematique">Les listes</div>
+		
+		<!-- Question 1 -->
+		<div class="question">On veut modifier l'objet <i>liste</i> pour que sa valeur devienne [0, 1, 4, 2, 3]. Que faut-il faire ? <i>(plusieurs réponses possibles)</i></div>
+		<div class="reponses" >
+			On se donne la variable suivante :
+			<b><pre>liste = [0, 1, 2, 3]</pre></b>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse1">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse1" id="label_Q1reponse1" >liste[2] = 4</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse2" id="label_Q1reponse2" >liste[2] = [4]</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse3">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse3" id="label_Q1reponse3" name="Q1true" >liste.insert(2,4)&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse4">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse4" id="label_Q1reponse4" >liste[2:3] = [4]</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse5">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse5" id="label_Q1reponse5" name="Q1true" >liste[2:2] = [4]&nbsp;</label>
+		</div>
+		<div class="reponses" id="boutton_Q1">
+			<a onclick="javascript:afficher_cb_soluce('Q1');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q1soluce"  style="display: none;">
+			<b>La première formule remplace 2 par 4, liste conserve 4 éléments et devient [0, 1, 4, 3]
+				<br>
+				La seconde, idem mais liste devient [0, 1, [4], 3]
+				<br>
+				La troisième est correcte
+				<br>
+				La quatrième est équivalente à la première, elle remplace 2 par 4
+				<br>
+			La cinquième est correcte également</b>
+		</div>
+		<br>
+		
+		<!-- Question 2 -->
+		<div class="question">On souhaite extraire et retourner le premier élément 0, tout en la retirant de la liste. Que faut-il faire ? <i>(plusieurs réponses possibles)</i></div>
+		<div class="reponses" >
+			On se donne la variable suivante :
+			<b><pre>liste = [0, 1, 2, 3]</pre></b>
+			Plus précisément on veut affecter à la variable <i>suivant</i> la valeur 0 de telle sorte qu'après l'exécution, <i>liste</i> ne contienne plus que [1, 2, 3]
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse1">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse1" id="label_Q2reponse1" >suivant = liste[0]</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse2" id="label_Q2reponse2" name="Q2true" >suivant = liste.pop(0)&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse3">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse3" id="label_Q2reponse3" >del liste[0]</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse4">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse4" id="label_Q2reponse4" name="Q2true" >suivant = liste[0]; del liste[0]&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse5">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse5" id="label_Q2reponse5" >suivant = del liste[0]</label>
+		</div>
+		<div class="reponses" id="boutton_Q2">
+			<a onclick="javascript:afficher_cb_soluce('Q2');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q2soluce"  style="display: none;">
+			<b>La première formule retourne bien 0 mais ne modifie pas liste
+				<br>
+				La seconde est correcte
+				<br>
+				La troisième enlève bien 0 de liste mais ne retourne rien
+				<br>
+				La quatrième version fonctionne - quoi qu'assez peu pythonique
+				<br>
+			La dernière formule est syntaxiquement incorrecte; del est une instruction et ne peut pas être utilisée comme résultat d'une affectation.</b>
+		</div>
+		<br>
+		
+		<!-- Question 3 -->
+		<div class="question">On veut trier la liste en ordre décroissant et en place, c'est-à-dire sans dupliquer la liste ni ses éléments. Que faut-il faire ? <i>(plusieurs réponses possibles)</i></div>
+		<div class="reponses" >
+			On se donne la variable suivante :
+			<b><pre>liste = [1, 0, 3, 2]</pre></b>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse1">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse1" id="label_Q3reponse1" name="Q3true" >liste.sort(reverse=True)&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse2" id="label_Q3reponse2" >liste.sort()</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse3">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse3" id="label_Q3reponse3" >sorted(liste, reverse=True)</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse4">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse4" id="label_Q3reponse4" name="Q3true" >liste.sort(); liste.reverse()&nbsp;</label>
+		</div>
+		<div class="reponses" id="boutton_Q3">
+			<a onclick="javascript:afficher_cb_soluce('Q3');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q3soluce"  style="display: none;">
+			<b>Il faut bien préciser reverse=True pour obtenir un tri décroissant
+				<br>
+				On ne veut pas dupliquer la liste initiale, c'est pourquoi ce n'est pas une bonne idée d'utiliser sorted.
+				<br>
+			La dernière formule fonctionne très bien également.</b>
+		</div>
+		<br>
+		
+	</body>
+</html>

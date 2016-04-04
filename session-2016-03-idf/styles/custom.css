@@ -1,0 +1,101 @@
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lora:400,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
+
+<style>
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+div.text_cell_render{
+    font-family: 'Alegreya Sans',Computer Modern, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    line-height: 135%;
+    font-size: 140%;
+    width:100%;/*600px;*/
+    /*margin-left:auto;*/
+    /*margin-right:auto;*/
+}
+/*div.text_cell_render{font-family: "Open Sans", sans-serif;font-weight: normal; line-height:normal;}*/
+
+/* header colours and fonts */
+.rendered_html h1 {
+    color:#9A3334;
+    /*margin-top: 0.5em;*/
+    padding: 1em;
+    display: block;
+    font-size: 40px;
+    text-align: center;
+    border-top: 2px solid #9A3334;
+    border-bottom: 2px solid #9A3334;
+}
+
+/*.rendered_html h1 { color: #9A3334; font-family: Lora, sans-serif; font-weight: normal; text-align: center; }*/
+.rendered_html h2 {
+    color: #9A3334;
+    /*font-family: Lora, sans-serif;*/
+    font-style: italic;
+    font-weight: normal;
+    font-size: 30px;
+    /*text-align: center;*/
+    border-bottom: 1px solid #9A3334;
+}
+.rendered_html h3 {
+    color: #9A3334;
+    /*font-family: Lora, sans-serif;*/
+    font-weight: normal;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.rendered_html h4 {
+    border: 2px solid #9A3334;
+    border-radius: 25px;
+    font-style: italic;
+    height:5%;
+    width:20%;
+    padding:5px;
+    text-align: center;
+}
+
+div.prompt {
+    display: None;
+}
+
+/* center the images */
+.ui-wrapper {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* center the images */
+.video {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.rendered_html img {
+    margin-top: 0em;
+}
+
+div.input_area {
+    border-radius: 10px;
+}
+
+.reveal h1 {
+    font-size: 70px;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.reveal h2 {
+    font-size: 50px;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.reveal h3 {
+    font-size: 50px;
+    
+}
+
+</style>

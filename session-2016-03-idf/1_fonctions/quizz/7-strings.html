@@ -1,0 +1,221 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>Quizz Python Partie 7</title>
+		<style type="text/css">   
+			<!--  
+body { 
+	margin-left : 10; margin-right : 20; margin-top : 0;  background-color:#ffffff; 
+	font-family : Arial, Helvetica, sans-serif;
+	text-align: left;
+} 
+
+.titlebanner {
+	margin-left:30px; margin-right : 40;
+	font-size: 24px; color: #606060;
+	font-weight: bold;
+	
+}
+
+.titlebanner h1 {
+	margin-left:30px; vertical-align: bottom;
+}
+
+.thematique {
+	margin-left:30px; margin-right : 200px; background-color:#ffffff;
+	padding:5px;
+	margin-top : 10px;
+	width:100%;
+	font-size : 24px; 
+	font-weight: bold;
+	color: #346DA2;
+	text-align: left;
+}
+
+.question {
+	margin-left:30px; margin-top:10px;
+	width:100%;
+	background-color:#FFD642;
+	color:black;
+	font-weight:bold;
+	padding:5px;
+	margin-bottom:2px;
+	text-align:left;
+	clear:both;
+	font-size:15px;
+}
+
+.reponses {
+	margin-left:30px;
+	margin-top:2px;
+	text-align:left;
+	line-height:25px;
+	font-size:14px
+}
+
+.reponses a:link, .reponses a:visited {color : #263033; text-decoration : underline; cursor:pointer;} 
+.reponses a:hover {color : #5494a4; text-decoration : underline; cursor:pointer;} 
+
+LABEL.reponse {
+	font-weight: bold;
+	cursor:pointer;display:inline;
+}
+
+LABEL.none {
+	font-weight: normal;
+	cursor:pointer;display:inline;
+}
+			-->  
+		</style>  
+		<script type="text/javascript">
+			<!-- Fonction verifier_question + afficher explication -->
+			<!--
+			function afficher_cb_soluce(id) {
+				document.getElementById('boutton_'+id).style.display="none";
+				document.getElementById(id+'soluce').style.display="block";
+				var answers = document.getElementsByName(id+'true');
+				for (var i=0; i < answers.length; i++) {
+					answers[i].style.backgroundColor = "#4CFF00";
+					answers[i].style.fontWeight = "bold";
+				}
+				return true;
+			}
+			-->
+		</script>
+	</head>
+	<body>
+		<!-- En-tete -->
+		<!-- <h1 class="titlebanner" >Qu'avez-vous retenu sur ...</h1> -->
+		<div class="thematique">Qu'avez-vous retenu sur ...</div>
+		
+		<!-- En-tete -->
+		<div class="thematique">les chaînes de caractères</div>
+		
+		<!-- Question 1 -->
+<div class="question">On reçoit en entrée une chaîne dont on sait qu'elle est de taille impaire, et on veut écrire dans la case du milieu un caractère "-".<br>Comment peut-on faire ? <i>(plusieurs réponses possibles)</i></div>
+		<div class="reponses">
+		C'est-à-dire que par exemple :
+<pre>chaine = "a"  => chaine = "-"
+chaine = "abc"  => chaine = "a-c"
+chaine = "abcde"  => chaine = "ab-de"<pre>
+</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse1">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse1" id="label_Q1reponse1" >chaine [ len(chaine)/2 ] = "-"</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse2" id="label_Q1reponse2" >chaine = chaine [:len(chaine)/2] + "-" + chaine [len(chaine)/2:]</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q1reponse3">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q1reponse3" id="label_Q1reponse3" name="Q1true" >chaine = chaine [:len(chaine)/2] + "-" + chaine [len(chaine)/2+1:]&nbsp;</label>
+		</div>
+		<div class="reponses" id="boutton_Q1">
+			<a onclick="javascript:afficher_cb_soluce('Q1');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q1soluce"  style="display: none;">
+			<b>Le premier choix n'est pas valide car le type chaîne n'est pas mutable
+<br>
+Le second choix n'est pas correct, car le résultat contient un caractère de trop
+<br>
+Le troisième choix est correct
+</b>
+		</div>
+		<br>
+
+		<!-- Question 2 -->
+<div class="question">À partir d'une chaîne, on veut calculer une chaîne dérivée où le caractère '-' est inséré entre les caractères de la chaîne originelle.<br>Comment peut-on faire ? <i>(plusieurs réponses possibles)</i></div>
+		<div class="reponses">
+		C'est-à-dire que par exemple :<br>
+<pre>chaine = ""  => resultat = ""
+chaine = "a"  => resultat = "a"
+chaine = "abcd"  => resultat = "a-b-c-d"</pre>
+</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse1">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse1" id="label_Q2reponse1" name="Q2true" >"-".join(chaine)&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q2reponse2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q2reponse2" id="label_Q2reponse2" name="Q2true" >"-".join(list(chaine))&nbsp;</label>
+		</div>
+		<div class="reponses" id="boutton_Q2">
+			<a onclick="javascript:afficher_cb_soluce('Q2');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q2soluce"  style="display: none;">
+			<b>La première clause est correcte, c'est bien sûr le plus simple
+<br>
+La seconde est correcte également, et reste acceptable car elle convertit la chaîne en liste; si on n'est plus très sûr de savoir si "join" se comporte correctement avec une chaîne en argument, au moins comme ceci on est sûr de son coup.
+</b>
+		</div>
+		<br>
+
+		<!-- Question 3 -->
+<div class="question">On veut écrire une fonction affichage qui met en forme un message à partir de 3 variables (nom, age, no_secu).<br>Quelle(s) solution(s) est(sont) correcte(s) ?<i>(plusieurs réponses possibles)</i></div>
+		<div class="reponses">Pour obternir par exemple :<br>
+<pre>>>> affichage("Dupont", 25, "1975787")
+'Dupont, 25 ans, 1975787'
+
+>>> affichage("Durand", 17, None)
+'Durand, 17 ans, pas de no de SS'</pre>
+<i>PS : Remarquez bien que la fonction affichage doit retourner le message en valeur, et non pas réaliser l'impression elle-même.</i></div>
+<div class="reponses">On envisage plusieurs solutions pour réaliser cela :</div>
+<div class="reponses">
+<b>Solution 1 :</b>
+
+<pre>def affichage(nom, age, no_secu):
+    return "{nom}, {age} ans, {secu}".\
+          format(nom=nom, age=age, 
+                 secu = no_secu if no_secu else "pas de no de SS")</pre>
+
+<b>Solution 2 :</b>
+
+<pre>def affichage(nom, age, no_secu):
+    return "{}, {} ans, {}".\
+          format(nom, age, no_secu if no_secu else "pas de no de SS")</pre>
+
+<b>Solution 3 :</b>
+
+<pre>def affichage(nom, age, no_secu):
+    return "%s, %s ans, %s".\
+          format(nom, age, no_secu if no_secu else "pas de no de SS")</pre>
+
+<b>Solution 4 :</b>
+
+<pre>def affichage(nom, age, no_secu):
+    print nom + ", " + age + " ans, " +\
+          (no_secu if no_secu else "pas de no de SS")</pre>
+
+ </div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse1">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse1" id="label_Q3reponse1" name="Q3true" >Solution 1&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse2">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse2" id="label_Q3reponse2" name="Q3true" >Solution 2&nbsp;</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse3">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse3" id="label_Q3reponse3" >Solution 3</label>
+		</div>
+		<div class="reponses">
+			<input type="checkbox" id="Q3reponse4">&nbsp;&nbsp;&nbsp;
+			<label onmouseover=this.className="reponse" onmouseout=this.className="none" for="Q3reponse4" id="label_Q3reponse4" >Solution 4</label>
+		</div>
+		<div class="reponses" id="boutton_Q3">
+			<a onclick="javascript:afficher_cb_soluce('Q3');">Afficher la solution</a>
+		</div>
+		<div class="reponses" id="Q3soluce"  style="display: none;">
+			<b>Les clauses 1, 2 sont correctes
+<br>
+La clause 3 est erronée, elle mélange les %s de l'opérateur % avec la méthode format
+<br>
+La clause 4 est erronée car elle fait print au lieu de return. Le code qui élabore le message serait par ailleurs correct, mais paraît moins lisible que les options 1 et 2.
+</b>
+		</div>
+		<br>
+		
+	</body>
+</html>
