@@ -126,6 +126,8 @@ def superellipsoid(n, rx, ry, rz, m1, m2):
 def myformat(values):
     fe = ['{:+.1f}']*len(values)
     fg = '('+', '.join(fe)+')'
+    print ('fe', fe)
+    print('fg', fg)
     return fg.format(*values)
 
 def myformat2d(values):
